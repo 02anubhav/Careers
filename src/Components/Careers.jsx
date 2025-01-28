@@ -19,7 +19,7 @@ const CareersPage = () => {
       <JobProfile />
       <MidSection />
       <Interview/>
-      <Footer/>
+      {/* <Footer/> */}
       {/* <Form/> */}
     </div>
   );
