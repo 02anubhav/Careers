@@ -22,7 +22,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
               It's time to build
               <span className="text-[#ab20fd]">
-                <br /> great Trading{" "}
+                <br /> great Trading
               </span>
               solutions <br />
               for

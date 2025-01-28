@@ -41,7 +41,7 @@ const CareerHero = () => {
         <div className="relative max-w-full mx-auto px-16 w-full pt-20">
           <div className="grid lg:grid-cols-12 gap-20">
             {/* Main Text Section */}
-            <div className="lg:col-span-7 space-y-8 2xl:space-y-10">
+            <div className="lg:col-span-7 space-y-6 2xl:space-y-14">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
                 <div className="w-2 h-2 rounded-full bg-[#ab20fd] animate-pulse" />
@@ -50,7 +50,7 @@ const CareerHero = () => {
 
               {/* Main Heading */}
               <div className="space-y-6">
-                <h1 className="text-6xl lg:text-8xl font-bold tracking-tight leading-tight">
+                <h1 className="text-5xl md:text-6xl 2xl:text-8xl font-bold tracking-tight leading-tight">
                   Create
                   <span className="text-[#ab20fd]"> Trading</span>
                   <br />
@@ -66,8 +66,8 @@ const CareerHero = () => {
               {/* Stats */}
               <div className="inline-grid grid-cols-2 md:grid-cols-4 gap-12">
                 {[
-                  { value: "50+", label: "Team Size" },
-                  { value: "300%", label: "Growth" },
+                  { value: "5+", label: "Team Size" },
+                  { value: "100%", label: "Growth" },
                   { value: "15+", label: "Countries" },
                   { value: "24/7", label: "Support" },
                 ].map((stat, index) => (
