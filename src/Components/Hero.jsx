@@ -1,6 +1,6 @@
 import React from "react";
 import { CgArrowLongRight } from "react-icons/cg";
-import Collab from "../assets/Collab.png";
+// import Collab from "../assets/Collab.png";
 
 function Hero() {
   return (

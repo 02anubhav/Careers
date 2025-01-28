@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import Collab from "../assets/Collab.png";
+// import Collab from "../assets/Collab.png";
 
 const HeroSection = () => {
   return (
