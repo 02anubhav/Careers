@@ -9,7 +9,7 @@ const JobProfile = () => {
       date: "2025-01-26",
       techstack: ["React", "JavaScript", "TailwindCSS"],
       category: "Engineering",
-      color: "bg-teal-400",
+      color: "bg-purple-400",
     },
     {
       id: "BE101",
@@ -17,7 +17,7 @@ const JobProfile = () => {
       date: "2025-01-26",
       techstack: ["Node.js", "Express", "MongoDB"],
       category: "Engineering",
-      color: "bg-teal-400",
+      color: "bg-purple-400",
     },
     {
       id: "SM101",
@@ -25,7 +25,7 @@ const JobProfile = () => {
       date: "2025-01-26",
       techstack: ["SEO", "Content Marketing", "Social Media Management"],
       category: "Growth",
-      color: "bg-rose-400",
+      color: "bg-purple-400",
     },
     {
       id: "UI101",
@@ -41,13 +41,13 @@ const JobProfile = () => {
       date: "2025-01-26",
       techstack: ["Java", "Kotlin", "Android Studio", "Firebase"],
       category: "Engineering",
-      color: "bg-teal-400",
+      color: "bg-purple-400",
     },
   ];
 
   return (
     <div className="min-h-screen bg-black p-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl xl:max-w-7xl mx-auto ">
         {/* Header Section */}
         <div className="mb-12">
           <h2 className="text-sm uppercase tracking-wider text-zinc-400 mb-4">
@@ -95,7 +95,7 @@ const JobProfile = () => {
                 <div
                   className={`w-12 h-12 rounded-full flex items-center justify-center 
                   transition-all duration-300 ${job.color} 
-                  hover:ring-2 hover:ring-white hover:rotate-45`}
+                  hover:ring-2 hover:ring-purple-800 hover:rotate-45`}
                 >
                   <ArrowUpRight className="w-7 h-7 text-white" />
                 </div>

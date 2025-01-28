@@ -7,13 +7,15 @@ import JobProfile from "./JobProfile";
 import Interview from "./Interview";
 import Form from "./Form";
 import Footer from "./Footer";
+import HeroSection from "./HeroSection";
 
 
 const CareersPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className=" bg-white">
       <Navbar />
-      <Hero />
+      {/* <Hero /> */}
+      <HeroSection/>
       <JobProfile />
       <MidSection />
       <Interview/>
