@@ -1,89 +1,96 @@
 import React from "react";
-import { CgArrowLongRight } from "react-icons/cg";
-// import Collab from "../assets/Collab.png";
+import { ArrowRight } from "lucide-react";
 
-function Hero() {
+const Hero = () => {
   return (
-    <section class="bg-gray-50 ">
-      <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-7   px-6 py-6 lg:px-20 lg:py-7 xl:py-9 bg-black">
-        {/* <!-- Left Side --> */}
-        <div className="text-center lg:text-left">
-          {/* Badge */}
-          <div className="inline-block bg-emerald-50 text-purple-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
-            CAREERS
-          </div>
+    <div className="bg-black max-h-screen relative overflow-hidden">
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 right-0 w-96 h-96 bg-[#ab20fd]/20 rounded-full mix-blend-multiply filter blur-xl" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#ab20fd]/10 rounded-full mix-blend-multiply filter blur-xl" />
+      </div>
 
-          {/* Heading */}
-          <h1 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-[3.5rem] 2xl:text-[5.3rem] text-white font-bold leading-tight mb-6">
-            It's time to build great  Trading solutions for <br /> India
-          </h1>
-
-          {/* Job Status */}
-          <div className="flex flex-wrap justify-center lg:justify-start gap-6 mb-8">
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 bg-lime-400 rounded-full"></span>
-              <span className="text-[#a1a1aa] text-base sm:text-lg">
-                60+ open roles
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12 pt-24 pb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="relative z-10 space-y-8">
+            <div className="inline-block">
+              <span className="bg-white text-purple-600 px-8 py-2 rounded-full font-semibold">
+                CAREERS
               </span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 bg-pink-400 rounded-full"></span>
-              <span className="text-[#a1a1aa] text-base sm:text-lg">
-                Hiring fast!
+            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+              It's time to build
+              <span className="text-[#ab20fd]">
+                <br /> great Trading{" "}
               </span>
-            </div>
+              solutions <br />
+              for
+              <span className="text-[#ab20fd]"> India</span>
+            </h1>
+
+            <p className="text-gray-400 text-lg max-w-lg mb-12">
+              Join us in revolutionizing the trading landscape of India with
+              cutting-edge analytics and intelligent solutions.
+            </p>
+
+            <button className="inline-flex items-center gap-2 bg-[#ab20fd] text-white px-6 py-3 rounded-lg hover:bg-[#ab20fd]/90 transition-all group">
+              <span>Explore Careers</span>
+              <ArrowRight className="w-10 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
 
-          {/* Button */}
-          <button className="bg-[#ab20fd] px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white rounded-xl flex items-center justify-center gap-3 transition-transform duration-300 group mx-auto lg:mx-0">
-            Explore All Roles
-            <span className="transform transition-transform duration-300 group-hover:translate-x-2">
-              <CgArrowLongRight size={24} />
-            </span>
-          </button>
-        </div>
+          {/* Right Image */}
+          <div className="relative z-10">
+            <div className="relative">
+              {/* Border Gradient */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ab20fd] to-purple-600 rounded-lg opacity-30 blur" />
 
-        {/* <!-- Right Side --> */}
-        <div class="flex justify-center ">
-          <div className="relative">
-            {/* Background Decorative Elements */}
-            <div className="absolute inset-0 blur-xl bg-[#ab20fd] rounded-3xl transform rotate-3 opacity-30"></div>
-            <div className="absolute inset-0 blur-xl bg-amber-300 rounded-3xl transform -rotate-3 opacity-30"></div>
+              {/* Image Container */}
+              <div className="relative rounded-lg overflow-hidden bg-black border border-white/10">
+                <div className="aspect-[4/3]">
+                  <img
+                    src="/api/placeholder/800/600"
+                    alt="Trading Analytics Dashboard"
+                    className="w-full h-full object-cover"
+                  />
 
-            {/* Main Image Container */}
-            <div className="relative bg-white rounded-3xl shadow-lg overflow-hidden">
-              {/* <img
-                src={Collab}
-                alt="Team collaboration"
-                className="w-full h-full sm:h-72 md:h-96 lg:h-[400px] xl:h-[470px] 2xl:h-[550px] object-cover"
-              /> */}
-
-              {/* Floating Stats Card */}
-              {/* <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-white/90 backdrop-blur-sm p-3 sm:p-4 rounded-xl shadow-lg">
-                <div className="text-emerald-800 font-medium text-sm sm:text-base">
-                  Join Our Team
+                  {/* Gradient Overlay on Image */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-black/30 to-transparent" />
                 </div>
-                <div className="text-emerald-600 text-xs sm:text-sm">
-                  Building the future of trading
-                </div>
-              </div> */}
 
-              {/* Decorative Dots */}
-              {/* <div className="absolute top-3 sm:top-4 right-3 sm:right-4 flex gap-2">
-                <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-emerald-400"></div>
-                <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-lime-400"></div>
-                <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-pink-400"></div>
-              </div> */}
+                {/* Stats Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm border-t border-white/10">
+                  <div className="grid grid-cols-3 divide-x divide-white/10">
+                    <div className="p-4 text-center">
+                      <div className="text-[#ab20fd] font-bold text-2xl">
+                        50K+
+                      </div>
+                      <div className="text-gray-400 text-sm">
+                        Active Traders
+                      </div>
+                    </div>
+                    <div className="p-4 text-center">
+                      <div className="text-[#ab20fd] font-bold text-2xl">
+                        ₹100Cr+
+                      </div>
+                      <div className="text-gray-400 text-sm">Daily Volume</div>
+                    </div>
+                    <div className="p-4 text-center">
+                      <div className="text-[#ab20fd] font-bold text-2xl">
+                        15+
+                      </div>
+                      <div className="text-gray-400 text-sm">Markets</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            {/* Additional Floating Elements */}
-            {/* <div className="absolute -top-4 -right-4 bg-lime-400 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full opacity-20"></div>
-            <div className="absolute -bottom-4 -left-4 bg-emerald-400 w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full opacity-60"></div> */}
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
 
 export default Hero;

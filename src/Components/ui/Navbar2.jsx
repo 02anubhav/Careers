@@ -15,11 +15,11 @@ const Navbar2 = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo and company name */}
           <div className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-white">TradyLytics</span>
+            <span className="text-2xl font-bold text-white">TradyLytics</span>
           </div>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-20">
             {["Home", "Careers", "Contact"].map((item) => (
               <a
                 key={item}

@@ -1,69 +1,160 @@
-import React from "react";
-import { Check } from "lucide-react";
+// import React from 'react';
+import { 
+  Phone, 
+  Users, 
+  Briefcase, 
+  CheckCircle,
+  Clock,
+  ArrowRight,
+  Award
+} from 'lucide-react';
 
+const recruitmentSteps = [
+  {
+    id: 1,
+    icon: Phone,
+    title: "Initial Discussion",
+    description: "Brief chat about your experience and aspirations",
+    duration: "30 mins",
+    details: [
+      "Overview of your experience",
+      "Understanding your career goals",
+      "Brief technical discussion",
+      "Role expectations alignment"
+    ]
+  },
+  {
+    id: 2,
+    icon: Briefcase,
+    title: "Technical Round",
+    description: "Deep dive into your technical expertise",
+    duration: "1 hour",
+    details: [
+      "Technical problem solving",
+      "System design discussion",
+      "Code review & methodology",
+      "Best practices & patterns"
+    ]
+  },
+  {
+    id: 3,
+    icon: Users,
+    title: "Team Round",
+    description: "Meet your potential future teammates",
+    duration: "45 mins",
+    details: [
+      "Team culture alignment",
+      "Collaborative problem solving",
+      "Team-specific discussions",
+      "Day-to-day responsibilities"
+    ]
+  },
+  {
+    id: 4,
+    icon: Award,
+    title: "Final Discussion",
+    description: "Offer discussion and next steps",
+    duration: "30 mins",
+    details: [
+      "Compensation discussion",
+      "Benefits overview",
+      "Start date planning",
+      "Documentation requirements"
+    ]
+  }
+];
 
-const RecruitmentProcess = () => {
-  const steps = [
-    {
-      title: "Intro call & Project",
-      description:
-        "This is for both of us to understand if we're right for each other.",
-    },
-    {
-      title: "Interview",
-      description:
-        "At this point, we'll discuss your project, experience, goals, and ambitions.",
-    },
-    {
-      title: "Conversation with a co-founder",
-      description:
-        "For some roles, one of our co-founders will have a chat with you.",
-    },
-    {
-      title: "Offer",
-      description: "We make you an offer",
-      isLast: true,
-    },
-  ];
-
+const ProcessCard = ({ step, index }) => {
   return (
-    <div className="min-h-screen bg-black p-8 pb-16  ">
-      <div className="max-w-6xl mx-auto">
-        {/* Header Section */}
-        <div className="mb-16">
-          <h2 className="text-sm uppercase tracking-wider text-[#a1a1aa] mb-4">
-            RECRUITMENT PROCESS
-          </h2>
-          <h1 className="text-4xl md:text-5xl font-light text-white mb-4">
-            Fast, constructive, <span className="font-semibold text-[#ab20fd]">kind</span>
-          </h1>
-          <p className="text-[#27272a] text-lg">
-            We've tried to keep the rounds lesser and the experience richer.
-          </p>
+    <div className="group relative">
+      {/* Number Badge */}
+      <div className="absolute -top-4 -left-4 w-8 h-8 rounded-lg bg-[#ab20fd] flex items-center justify-center text-white font-semibold z-10">
+        {index + 1}
+      </div>
+
+      {/* Main Card */}
+      <div className="h-full bg-black border border-[#ab20fd]/20 rounded-xl p-6 hover:border-[#ab20fd] transition-all duration-300">
+        {/* Icon & Title */}
+        <div className="mb-6">
+          <div className="w-12 h-12 rounded-xl bg-[#ab20fd]/10 flex items-center justify-center mb-4">
+            <step.icon className="w-6 h-6 text-[#ab20fd]" />
+          </div>
+          <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-[#ab20fd] transition-colors">
+            {step.title}
+          </h3>
+          <p className="text-gray-400">{step.description}</p>
         </div>
 
-        {/* Steps List */}
-        <div className="space-y-12">
-          {steps.map((step, index) => (
-            <div key={index} className="flex items-start gap-4">
-              {/* Bullet point or check mark */}
-              <div className="mt-2">
-                {step.isLast ? (
-                  <div className="w-6 h-6 rounded-full bg-[#ab20fd] flex items-center justify-center">
-                    <Check className="w-4 h-4 text-white" />
-                  </div>
-                ) : (
-                  <div className="w-3 h-3 rounded-full bg-[#ab20fd] mt-1" />
-                )}
-              </div>
+        {/* Duration */}
+        <div className="flex items-center gap-2 mb-4 text-gray-400">
+          <Clock className="w-4 h-4 text-[#ab20fd]" />
+          <span className="text-sm">{step.duration}</span>
+        </div>
 
-              {/* Content */}
-              <div>
-                <h3 className="text-xl text-white mb-2">{step.title}</h3>
-                <p className="text-[#a1a1aa] text-lg">{step.description}</p>
-              </div>
+        {/* Details */}
+        <div className="space-y-3">
+          {step.details.map((detail, idx) => (
+            <div key={idx} className="flex items-start gap-3">
+              <CheckCircle className="w-4 h-4 text-[#ab20fd] mt-0.5" />
+              <span className="text-gray-400 text-sm">{detail}</span>
             </div>
           ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const RecruitmentProcess = () => {
+  return (
+    <div className="min-h-screen bg-black text-white px-4 py-20">
+      <div className="max-w-full mx-auto">
+        {/* Header Section */}
+        <div className="relative mb-20">
+          {/* Background Elements */}
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#ab20fd]/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#ab20fd]/10 rounded-full blur-3xl" />
+
+          {/* Content */}
+          <div className="relative text-center max-w-3xl mx-auto">
+            <span className="inline-block px-4 py-1 bg-[#ab20fd]/10 rounded-full text-[#ab20fd] text-sm font-medium mb-6">
+              JOIN OUR TEAM
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Simple & Transparent
+              <span className="block text-[#ab20fd]">Recruitment Process</span>
+            </h1>
+            <p className="text-lg text-gray-400">
+              We've designed our recruitment process to be straightforward and efficient, 
+              ensuring a great experience for all candidates.
+            </p>
+          </div>
+        </div>
+
+        {/* Process Grid */}
+        <div className="relative">
+          {/* Grid Container */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {recruitmentSteps.map((step, index) => (
+              <ProcessCard
+                key={step.id}
+                step={step}
+                index={index}
+              />
+            ))}
+          </div>
+
+          {/* Connecting Lines */}
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#ab20fd]/10 to-transparent" />
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-20">
+          <p className="text-gray-400 mb-6">Ready to start your journey with us?</p>
+          <button className="group inline-flex items-center gap-2 px-8 py-4 bg-[#ab20fd] rounded-xl hover:bg-[#ab20fd]/90 transition-all duration-300">
+            <span className="text-white font-medium">Apply Now</span>
+            <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
+          </button>
         </div>
       </div>
     </div>
