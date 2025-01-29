@@ -18,13 +18,13 @@ const CareerHero = () => {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#ab20fd]/20 rounded-full blur-3xl opacity-20" />
 
           {/* Grid Pattern */}
-          <div className="absolute inset-0 grid grid-cols-8 gap-px opacity-20">
+          {/* <div className="absolute inset-0 grid grid-cols-8 gap-px opacity-20">
             {Array(32)
               .fill(null)
               .map((_, i) => (
                 <div key={i} className="border-r border-t border-white/10" />
               ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Content Container */}
