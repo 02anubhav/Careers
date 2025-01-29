@@ -48,8 +48,7 @@ const Form = () => {
 
         {/* Animated Background Elements */}
         <div className="relative">
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-purple-600 blur rounded-full opacity-20 animate-pulse"></div>
-          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-600 blur rounded-full opacity-20 animate-pulse delay-200"></div>
+         
 
           {/* Form Card */}
           <div className="relative border border-[#27272a] rounded-2xl shadow-lg p-8 py-16 backdrop-blur-sm bg-black">
@@ -62,7 +61,7 @@ const Form = () => {
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 text-[#a1a1aa] rounded-lg border border-slate-200 focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                  className="w-full px-4 py-3 text-[#a1a1aa] rounded-lg border border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
                   placeholder="Enter your full name"
                   value={formData.name}
                   onChange={(e) =>
@@ -80,7 +79,7 @@ const Form = () => {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 rounded-lg text-[#a1a1aa] border border-slate-200 focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg text-[#a1a1aa] border border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
                     placeholder="Enter your email"
                     value={formData.email}
                     onChange={(e) =>
@@ -96,7 +95,7 @@ const Form = () => {
                   </label>
                   <input
                     type="tel"
-                    className="w-full px-4 py-3 rounded-lg text-[#a1a1aa] border border-slate-200 focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg text-[#a1a1aa] border border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
                     placeholder="Enter your phone number"
                     value={formData.phone}
                     onChange={(e) =>
@@ -108,7 +107,7 @@ const Form = () => {
 
               {/* Education Section */}
               <div className="space-y-6">
-                <h3 className="text-lg font-medium text-[#ab20fd] border-b border-slate-200 pb-2">
+                <h3 className="text-lg font-medium text-[#ab20fd] border-b border-[#27272a] pb-2">
                   Educational Background
                 </h3>
 
@@ -119,7 +118,7 @@ const Form = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 rounded-lg text-[#a1a1aa] border border-slate-200 focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg text-[#a1a1aa] border border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
                     placeholder="Enter your college name"
                     value={formData.collegeName}
                     onChange={(e) =>
@@ -135,7 +134,7 @@ const Form = () => {
                       Degree
                     </label>
                     <select
-                      className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-slate-200 focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
                       value={formData.degree}
                       onChange={(e) =>
                         setFormData({ ...formData, degree: e.target.value })
@@ -157,7 +156,7 @@ const Form = () => {
                       Graduation Year
                     </label>
                     <select
-                      className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-slate-200 focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
                       value={formData.graduationYear}
                       onChange={(e) =>
                         setFormData({
@@ -188,7 +187,7 @@ const Form = () => {
                     Preferred Role
                   </label>
                   <select
-                    className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-slate-200 focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
                     value={formData.role}
                     onChange={(e) =>
                       setFormData({ ...formData, role: e.target.value })
@@ -209,7 +208,7 @@ const Form = () => {
                   </label>
                   <input
                     type="number"
-                    className="w-full px-4 py-3 rounded-lg text-[#a1a1aa] border border-slate-200 focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg text-[#a1a1aa] border border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
                     placeholder="Years of experience"
                     value={formData.experience}
                     onChange={(e) =>
@@ -226,10 +225,10 @@ const Form = () => {
                   Upload Resume
                 </label>
                 <div className="flex items-center justify-center w-full">
-                  <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-slate-200 border-dashed rounded-lg cursor-pointer hover:bg-slate-50 transition-colors">
+                  <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-[#27272a] border-dashed rounded-lg cursor-pointer hover:bg-[#27272a] transition-colors">
                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
                       <Upload className="w-8 h-8 mb-3 text-slate-400" />
-                      <p className="mb-2 text-sm text-slate-500">
+                      <p className="mb-2 text-sm text-[#a1a1aa]">
                         <span className="font-medium">Click to upload</span> or
                         drag and drop
                       </p>
@@ -255,7 +254,7 @@ const Form = () => {
                 </label>
                 <input
                   type="url"
-                  className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-slate-200 focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
                   placeholder="https://linkedin.com/in/your-profile"
                   value={formData.linkedin}
                   onChange={(e) =>
