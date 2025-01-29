@@ -12,38 +12,56 @@ import {
 } from "lucide-react";
 
 const perks = [
-  {
-    text: "Innovative Tech Stack",
-    icon: Code,
-  },
-  {
-    text: "Rapid Growth",
-    icon: Rocket,
-  },
-  {
-    text: "Great Culture",
-    icon: Users,
-  },
-  {
-    text: "Learning Opportunities",
-    icon: Brain,
-  },
-  {
-    text: "Global Impact",
-    icon: Globe,
-  },
-  {
-    text: "Career Growth",
-    icon: Target,
-  },
-  {
-    text: "Mentorship",
-    icon: GraduationCap,
-  },
-  {
-    text: "Data-Driven",
-    icon: BarChart,
-  },
+  
+    {
+      text: "Innovative Tech Stack",
+      icon: Code,
+      description:
+        "Work with cutting-edge technologies and modern frameworks to build high-performance applications.",
+    },
+    {
+      text: "Rapid Growth",
+      icon: Rocket,
+      description:
+        "Join a fast-growing team with opportunities to take on new challenges and accelerate your career.",
+    },
+    {
+      text: "Great Culture",
+      icon: Users,
+      description:
+        "Be part of a collaborative, inclusive, and supportive environment that values creativity and teamwork.",
+    },
+    {
+      text: "Learning Opportunities",
+      icon: Brain,
+      description:
+        "Enhance your skills with continuous learning, mentorship programs, and hands-on experience.",
+    },
+    {
+      text: "Global Impact",
+      icon: Globe,
+      description:
+        "Contribute to projects that have a worldwide reach and make a meaningful difference in the industry.",
+    },
+    {
+      text: "Career Growth",
+      icon: Target,
+      description:
+        "Advance your career with clear growth paths, leadership opportunities, and professional development.",
+    },
+    {
+      text: "Mentorship",
+      icon: GraduationCap,
+      description:
+        "Learn from industry experts, receive personalized guidance, and grow under experienced mentorship.",
+    },
+    {
+      text: "Data-Driven",
+      icon: BarChart,
+      description:
+        "Leverage data analytics and insights to make informed decisions and drive strategic growth.",
+    },
+  
 ];
 
 // Double the perks array for seamless loop
@@ -60,7 +78,7 @@ const WhyJoinUs = () => {
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Why Join
-            <span className="text-[#ab20fd]"> TradyLytics</span>?
+            <span className="text-[#ab20fd]"> TradyLytics</span> ?
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Be part of India's fastest-growing trading analytics platform. We're
@@ -107,8 +125,7 @@ const WhyJoinUs = () => {
                 {perk.text}
               </h3>
               <p className="text-gray-400">
-                Join a team that values innovation, growth, and collaboration in
-                building the future of trading.
+               {perk.description} 
               </p>
             </div>
           ))}

@@ -63,7 +63,7 @@ const Navbar2 = () => {
               </a>
               <a
                 href="#"
-                className="text-white hover:text-[ab20fd] transition-colors px-2 py-1 rounded-md"
+                className="text-white  hover:text-[ab20fd] transition-colors px-2 py-1 rounded-md"
               >
                 Careers
               </a>

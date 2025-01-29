@@ -40,14 +40,11 @@ const Footer = () => {
 
         <div className="py-16 grid grid-cols-1 lg:grid-cols-2 gap-16 ">
           {/* Left Section - Logo */}
-          <div className="space-y-8">
+          <div >
             <h1 className="text-4xl md:text-6xl lg:text-[8rem] text-[#ab20fd] font-semibold tracking-tight leading-none">
               TradyLytics
             </h1>
-            <p className="text-gray-400 max-w-md">
-              Empowering traders with intelligent analytics and data-driven
-              insights.
-            </p>
+            
           </div>
 
           {/* Right Section - Links and Info */}
@@ -104,7 +101,7 @@ const Footer = () => {
               <div className="flex gap-2 text-gray-400">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-1" />
                 <p className="text-sm">
-                  318 Sector 5 Avas Vikas Colony, Sikandra, Agra, Uttar Pradesh,
+                  Sector 5 Avas Vikas Colony, Sikandra, Agra, Uttar Pradesh,
                   282007 India
                 </p>
               </div>
