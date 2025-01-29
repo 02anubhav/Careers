@@ -115,7 +115,7 @@ const WhyJoinUs = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <button
             className="group inline-flex items-center gap-2 px-8 py-4 bg-[#ab20fd] rounded-xl 
             hover:bg-[#ab20fd]/90 transition-all duration-300"
@@ -123,7 +123,7 @@ const WhyJoinUs = () => {
             <span className="text-white font-medium">View Open Positions</span>
             <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Add the animation keyframe to your global CSS or styles */}

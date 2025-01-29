@@ -28,7 +28,7 @@ const recruitmentSteps = [
     icon: Briefcase,
     title: "Technical Round",
     description: "Deep dive into your technical expertise",
-    duration: "1 hour",
+    duration: "30 mins",
     details: [
       "Technical problem solving",
       "System design discussion",
@@ -41,7 +41,7 @@ const recruitmentSteps = [
     icon: Users,
     title: "Team Round",
     description: "Meet your potential future teammates",
-    duration: "45 mins",
+    duration: "30 mins",
     details: [
       "Team culture alignment",
       "Collaborative problem solving",
@@ -56,7 +56,7 @@ const recruitmentSteps = [
     description: "Offer discussion and next steps",
     duration: "30 mins",
     details: [
-      "Compensation discussion",
+      // "Compensation discussion",
       "Benefits overview",
       "Start date planning",
       "Documentation requirements"
@@ -68,9 +68,9 @@ const ProcessCard = ({ step, index }) => {
   return (
     <div className="group relative">
       {/* Number Badge */}
-      <div className="absolute -top-4 -left-4 w-8 h-8 rounded-lg bg-[#ab20fd] flex items-center justify-center text-white font-semibold z-10">
+      {/* <div className="absolute -top-4 -left-4 w-8 h-8 rounded-lg bg-[#ab20fd] flex items-center justify-center text-white font-semibold z-10">
         {index + 1}
-      </div>
+      </div> */}
 
       {/* Main Card */}
       <div className="h-full bg-black border border-[#ab20fd]/20 rounded-xl p-6 hover:border-[#ab20fd] transition-all duration-300">

@@ -63,23 +63,40 @@ const JobCard = ({ title, department, skills }) => (
 // Main Component
 const JobOpportunities = () => {
   return (
-    <div className="min-h-screen bg-black  text-white p-12 2xl:pt-32">
-      <div className="max-w-full mx-auto ">
+    <div className="min-h-screen bg-black  text-white p-6 2xl:pt-44 ">
+      <div className="max-w-full mx-auto  ">
         {/* Header Section */}
-        <div className="mb-12">
-          <span className="text-[#a1a1aa] text-sm tracking-wider">
+        <div className="mb-12  text-center">
+          {/* <span className="text-[#a1a1aa] text-sm tracking-wider">
             OPPORTUNITIES
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-6">
             Work on things
             <br />
             that matter
           </h1>
-          <p className="text-gray-400 max-w-2xl">
-            Join our team of passionate individuals who thrive on challenging
-            problems and desire personal growth. Every day we work to make
-            technology more accessible and impactful.
-          </p>
+          <div className="max-w-2xl mx-auto">
+            {" "}
+            <p className="text-gray-400 max-w-2xl ">
+              Join our team of passionate individuals who thrive on challenging
+              problems and desire personal growth. Every day we work to make
+              technology more accessible and impactful.
+            </p>
+          </div> */}
+          <div className="text-center mb-20">
+            <span className="inline-block px-4 py-1 bg-[#ab20fd]/10 rounded-full text-[#ab20fd] text-sm font-medium mb-6">
+              OPPORTUNITIES
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Apply To our 
+              <span className="text-[#ab20fd]"> Open Position</span>
+            </h1>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              Be part of India's fastest-growing trading analytics platform.
+              We're building something special and looking for exceptional
+              talent.
+            </p>
+          </div>
         </div>
 
         {/* Jobs Grid */}

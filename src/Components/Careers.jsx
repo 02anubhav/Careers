@@ -8,10 +8,12 @@ import Interview from "./Interview";
 import Form from "./Form";
 import Footer from "./Footer";
 import HeroSection from "./HeroSection";
-import Navbar2 from "./ui/Navbar2";
+import Navbar2 from "./Navbar2";
 
 
-import HeroSection2 from "./ui/HeroSection2";
+
+// import HeroSection2 from "./ui/HeroSection2";
+// import Yoyo from "./yoyo";
 
 
 const CareersPage = () => {
@@ -22,6 +24,7 @@ const CareersPage = () => {
       {/* <HeroSection2/> */}
       {/* <Hero /> */}
       <HeroSection/>
+      {/* <Yoyo/> */}
       <JobProfile />
       <MidSection />
       <Interview/>

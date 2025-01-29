@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X} from "lucide-react";
+import {  BarChart} from "lucide-react";
 
 const Navbar2 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,11 +12,14 @@ const Navbar2 = () => {
   return (
     <nav className="bg-black shadow-md">
       {/* Main navbar container */}
-      <div className="max-w-full mx-auto px-8">
+      <div className="max-w-full mx-auto px-6 pt-2 ">
         <div className="flex justify-between h-16 items-center">
           {/* Logo and company name */}
           <div className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-white">TradyLytics</span>
+            <BarChart className="h-6 w-6 text-[#ab20fd]" />
+            <span className="text-xl sm:text-2xl font-bold text-white">
+              TradyLytics
+            </span>
           </div>
 
           {/* Desktop menu */}
@@ -36,7 +40,7 @@ const Navbar2 = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-slate-700 hover:text-[#ab20fd] focus:outline-none"
+              className="text-white hover:text-[#ab20fd] focus:outline-none"
             >
               {isOpen ? (
                 <X className="h-6 w-6" />
@@ -53,19 +57,19 @@ const Navbar2 = () => {
             <div className="flex flex-col space-y-4 py-4">
               <a
                 href="#"
-                className="text-slate-700 hover:text-[ab20fd] transition-colors px-2 py-1 rounded-md"
+                className="text-white hover:text-[ab20fd] transition-colors px-2 py-1 rounded-md"
               >
                 Home
               </a>
               <a
                 href="#"
-                className="text-slate-700 hover:text-[ab20fd] transition-colors px-2 py-1 rounded-md"
+                className="text-white hover:text-[ab20fd] transition-colors px-2 py-1 rounded-md"
               >
                 Careers
               </a>
               <a
                 href="#"
-                className="text-slate-700 hover:text-[ab20fd] transition-colors px-2 py-1 rounded-md"
+                className="text-white hover:text-[ab20fd] transition-colors px-2 py-1 rounded-md"
               >
                 Contact
               </a>
