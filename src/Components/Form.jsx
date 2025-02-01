@@ -46,7 +46,7 @@ const Form = () => {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-block bg-emerald-50 text-[#ab20fd] px-4 py-1 rounded-full text-sm font-medium mb-4">
+          <div className="inline-block bg-[#110319] text-[#ab20fd] px-4 py-1 rounded-full text-sm font-medium mb-4">
             JOIN US
           </div>
           <h2 className="text-4xl font-light text-[#ab20fd] mb-4">
