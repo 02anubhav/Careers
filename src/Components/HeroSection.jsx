@@ -1,13 +1,13 @@
 import React from "react";
 import { ArrowUpRight, BarChart, ChevronRight } from "lucide-react";
-import Navbar2 from "./Navbar2";
+import HomeNav from "./HomeNav";
 
 const CareerHero = () => {
   return (
     <div className="min-h-full bg-black text-white overflow-hidden">
       {/* Top Navigation */}
      
-      <Navbar2 />
+     <HomeNav/>
 
       {/* Main Content */}
       <main className="relative mt-4  flex items-center  ">

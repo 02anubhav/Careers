@@ -1,35 +1,34 @@
 import React from "react";
 
-
-import Hero from "./Hero";
 import MidSection from "./MidSection";
 import JobProfile from "./JobProfile";
 import Interview from "./Interview";
 import Form from "./Form";
 import Footer from "./Footer";
 import HeroSection from "./HeroSection";
-import Navbar2 from "./Navbar2";
 
+import Home from "./Home";
 
-
-// import HeroSection2 from "./ui/HeroSection2";
-// import Yoyo from "./yoyo";
-
+import Featured from "./Featured";
+import JobDescription from "./JobDescription";
 
 const CareersPage = () => {
   return (
     <div className=" bg-white">
-      {/* <Navbar /> */}
-      {/* <Navbar2/> */}
-      {/* <HeroSection2/> */}
-      {/* <Hero /> */}
-      <HeroSection/>
-      {/* <Yoyo/> */}
+      {/* home page */}
+      <Home />
+      <Featured />
+      <Footer />
+      {/* careers  */}
+      <HeroSection />
       <JobProfile />
       <MidSection />
-      <Interview/>
-      <Footer/>
-      <Form/>
+      <Interview />
+      <Footer />
+      {/* job description */}
+      <JobDescription />
+      {/* form*/}
+      <Form />
     </div>
   );
 };
