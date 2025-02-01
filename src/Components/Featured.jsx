@@ -167,7 +167,7 @@ const FeaturesSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
       </div>
 
-      <div className="relative max-w-[90vw] mx-auto">
+      <div className="relative max-w-full mx-auto">
         {/* Enhanced Section Header */}
         <div className="text-center mb-[8vw]">
           <div className="inline-flex items-center px-[1.2vw] py-[0.6vw] bg-[#14031D] rounded-full mb-[2vw] border border-white/5">
@@ -176,7 +176,7 @@ const FeaturesSection = () => {
             </span>
           </div>
 
-          <div className="max-w-[60vw] mx-auto space-y-[2vw]">
+          <div className="max-w-full mx-auto space-y-[2vw]">
             <h2 className="text-[4vw] font-bold tracking-tight">
               <span className="text-white/90">Power Your Trading with </span>
               <span className="text-[#ab20fd]">Advanced Features</span>

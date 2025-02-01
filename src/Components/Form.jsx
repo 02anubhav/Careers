@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "./Footer";
 import {
   Send,
   Upload,
@@ -23,10 +24,20 @@ const Form = () => {
     experience: "",
     resume: null,
     linkedin: "",
+    motivation: "",
   });
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Form submitted:", formData);
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (formData.motivation.trim().split(" ").length < 100) {
+      alert("Your motivation statement must be at least 100 words long.");
+      return;
+    }
     console.log("Form submitted:", formData);
   };
 
@@ -41,19 +52,20 @@ const Form = () => {
           <h2 className="text-4xl font-light text-[#ab20fd] mb-4">
             Apply for a Position
           </h2>
-          <p className="text-slate-600">
+          <p className="text-[#a1a1aa]">
             Fill out the form below and we'll get back to you soon
           </p>
         </div>
 
         {/* Animated Background Elements */}
         <div className="relative">
-         
-
           {/* Form Card */}
           <div className="relative border border-[#27272a] rounded-2xl shadow-lg p-8 py-16 backdrop-blur-sm bg-black">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Personal Information */}
+              <h3 className="text-lg font-medium text-[#ab20fd] border-b border-[#27272a] pb-2">
+                Personal Information
+              </h3>
               <div className="group">
                 <label className="flex items-center text-sm font-medium text-white mb-2">
                   <User className="w-4 h-4 mr-2 text-[#ab20fd]" />
@@ -134,7 +146,7 @@ const Form = () => {
                       Degree
                     </label>
                     <select
-                      className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all bg-black"
                       value={formData.degree}
                       onChange={(e) =>
                         setFormData({ ...formData, degree: e.target.value })
@@ -156,7 +168,7 @@ const Form = () => {
                       Graduation Year
                     </label>
                     <select
-                      className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all bg-black"
                       value={formData.graduationYear}
                       onChange={(e) =>
                         setFormData({
@@ -187,7 +199,7 @@ const Form = () => {
                     Preferred Role
                   </label>
                   <select
-                    className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all bg-black"
                     value={formData.role}
                     onChange={(e) =>
                       setFormData({ ...formData, role: e.target.value })
@@ -208,7 +220,7 @@ const Form = () => {
                   </label>
                   <input
                     type="number"
-                    className="w-full px-4 py-3 rounded-lg text-[#a1a1aa] border border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg text-[#a1a1aa] border border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all bg-black"
                     placeholder="Years of experience"
                     value={formData.experience}
                     onChange={(e) =>
@@ -225,14 +237,14 @@ const Form = () => {
                   Upload Resume
                 </label>
                 <div className="flex items-center justify-center w-full">
-                  <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-[#27272a] border-dashed rounded-lg cursor-pointer hover:bg-[#27272a] transition-colors">
+                  <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-[#27272a] border-dashed rounded-lg cursor-pointer hover:bg-[#27272a] transition-colors bg-black">
                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
                       <Upload className="w-8 h-8 mb-3 text-slate-400" />
                       <p className="mb-2 text-sm text-[#a1a1aa]">
                         <span className="font-medium">Click to upload</span> or
                         drag and drop
                       </p>
-                      <p className="text-xs text-slate-500">
+                      <p className="text-xs text-purple-500">
                         PDF, DOC up to 10MB
                       </p>
                     </div>
@@ -254,13 +266,29 @@ const Form = () => {
                 </label>
                 <input
                   type="url"
-                  className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg border text-[#a1a1aa] border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all bg-black"
                   placeholder="https://linkedin.com/in/your-profile"
                   value={formData.linkedin}
                   onChange={(e) =>
                     setFormData({ ...formData, linkedin: e.target.value })
                   }
                 />
+              </div>
+
+              {/* Motivation Section */}
+              <div className="group">
+                <label className="flex items-center text-sm font-medium text-white mb-2">
+                  What motivates you to join us?
+                </label>
+                <textarea
+                  className="w-full px-4 py-3 text-[#a1a1aa] rounded-lg border border-[#27272a] focus:border-[#ab20fd] focus:ring-2 focus:ring-[#ab20fd] outline-none transition-all"
+                  placeholder="Write at least 100 words..."
+                  rows="6"
+                  value={formData.motivation}
+                  onChange={(e) =>
+                    setFormData({ ...formData, motivation: e.target.value })
+                  }
+                ></textarea>
               </div>
 
               {/* Submit Button */}
@@ -276,10 +304,12 @@ const Form = () => {
         </div>
 
         {/* Bottom Note */}
-        <div className="text-center mt-8 text-slate-500 text-sm">
+        <div className="text-center mt-8 mb-8 text-white text-sm">
           By submitting this form, you agree to our terms and privacy policy.
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
